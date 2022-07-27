@@ -1,0 +1,15 @@
+#在这里配置你的数据库，默认用户名密码为root，默认仓库名称为tests，可以自行配置以进行调试
+spring:
+  datasource:
+    username: root
+    password: 123456789
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#mybatis会在resources的mapper目录下寻找xml文件
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+#端口为8081
+server:
+  port: 8081

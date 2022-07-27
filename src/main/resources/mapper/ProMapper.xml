@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.ProMapper">
+
+    <!--这里的id与ProMapper接口中名称一一对应-->
+    <select id="selectProName" resultType="integer">
+        SELECT id
+        FROM product
+        WHERE pro_name = #{proName}
+    </select>
+
+    <insert id="insertPro">
+        INSERT INTO product(pro_name)
+        VALUES (#{proName})
+    </insert>
+    
+    <delete id="deletePro">
+        DELETE FROM product
+        WHERE pro_name=#{proName}
+    </delete>
+
+    <delete id="deleteProId">
+        DELETE FROM product
+        WHERE id=#{proId}
+    </delete>
+    
+
+
+
+</mapper>
